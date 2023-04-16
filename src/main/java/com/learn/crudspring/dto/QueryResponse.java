@@ -9,8 +9,8 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.learn.crudspring.persistence.model.UserEntity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 
 /**
  * 
@@ -18,13 +18,13 @@ import lombok.Setter;
  *
  */
 @Getter
-@Setter
+@AllArgsConstructor
 public class QueryResponse {
 
 	private String uuid;
 
 	private HttpStatus status;
-	
+
 	@JsonProperty(value = "status_code")
 	private int statusCode;
 

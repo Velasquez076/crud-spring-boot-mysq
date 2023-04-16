@@ -1,5 +1,6 @@
 package com.learn.crudspring.controller;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 import org.springframework.http.HttpStatus;
@@ -10,14 +11,12 @@ import com.learn.crudspring.dto.Request;
 import com.learn.crudspring.service.UserService;
 
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * 
  * @author juveme88
  *
  */
-@Slf4j
 @Component
 @RequiredArgsConstructor
 public class UserConverter {
@@ -25,23 +24,13 @@ public class UserConverter {
 	private final UserService service;
 
 	QueryResponse findAll() {
-		QueryResponse response = new QueryResponse();
-		response.setUuid(UUID.randomUUID().toString());
-		response.setStatus(HttpStatus.OK);
-		response.setStatusCode(HttpStatus.OK.value());
-		response.setLstUsers(service.findAll());
-		log.info(".:: Find all successfully ::.");
-		return response;
+		return new QueryResponse(UUID.randomUUID().toString(), HttpStatus.OK, HttpStatus.OK.value(), service.findAll(),
+				null);
 	}
 
 	QueryResponse saveUser(Request req) {
-		QueryResponse response = new QueryResponse();
-		response.setUuid(UUID.randomUUID().toString());
-		response.setStatus(HttpStatus.CREATED);
-		response.setStatusCode(HttpStatus.CREATED.value());
-		response.setUser(service.save(req.getUser()));
-		log.info(".:: Save successfully ::.");
-		return response;
+		return new QueryResponse(UUID.randomUUID().toString(), HttpStatus.CREATED, HttpStatus.CREATED.value(),
+				new ArrayList<>(), service.save(req.getUser()));
 	}
 
 }
