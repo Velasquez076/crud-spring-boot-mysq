@@ -3,8 +3,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-!**/key_git
-!**/key_git.pub
+key_git
+key_git.pub
 
 ### STS ###
 .apt_generated
