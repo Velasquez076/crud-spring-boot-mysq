@@ -24,6 +24,9 @@ public class QueryResponse {
 	private String uuid;
 
 	private HttpStatus status;
+	
+	@JsonProperty(value = "status_code")
+	private int statusCode;
 
 	@JsonInclude(value = Include.NON_EMPTY)
 	@JsonProperty(value = "Users")

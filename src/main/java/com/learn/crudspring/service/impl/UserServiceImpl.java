@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.learn.crudspring.persistence.model.UserEntity;
-import com.learn.crudspring.persistence.respository.UserRepository;
+import com.learn.crudspring.persistence.repository.UserRepository;
 import com.learn.crudspring.service.UserService;
 
 import lombok.RequiredArgsConstructor;
@@ -48,10 +48,12 @@ public class UserServiceImpl implements UserService {
 	@Override
 	@Transactional
 	public UserEntity save(UserEntity user) {
-		UserEntity findUser = userRepository.findById(user.getId()).orElse(null);
-		if (findUser != null) {
-			log.info(".:: User already exist ::.");
-			return findUser;
+		if (user.getId() != null) {
+			UserEntity findUser = userRepository.findById(user.getId()).orElse(null);
+			if (findUser != null) {
+				log.info(".:: User already exist ::.");
+				return findUser;
+			}
 		}
 		return userRepository.save(user);
 	}

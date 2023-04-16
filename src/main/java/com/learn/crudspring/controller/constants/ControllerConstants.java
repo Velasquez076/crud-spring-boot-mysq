@@ -19,5 +19,4 @@ public class ControllerConstants {
 	public static final String USERS = "/all";
 
 	public static final String USER_BY_ID = "/id";
-	
 }
