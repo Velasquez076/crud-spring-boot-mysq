@@ -1,21 +1,19 @@
 package com.learn.crudspring.service;
 
-import com.learn.crudspring.entity.User;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
+import java.util.List;
 
-import java.util.Optional;
+import com.learn.crudspring.persistence.model.UserEntity;
 
+/**
+ * 
+ * @author juveme88
+ *
+ */
 public interface UserService {
 
-    public Iterable<User> findAll();
+	List<UserEntity> findAll();
 
-    public Page<User> findAll(Pageable pageable);
+	UserEntity findById(Long id);
 
-    public Optional<User> findById(Long id);
-
-    public User save(User user);
-
-    public void deleteById(Long id);
-
+	UserEntity save(UserEntity user);
 }
