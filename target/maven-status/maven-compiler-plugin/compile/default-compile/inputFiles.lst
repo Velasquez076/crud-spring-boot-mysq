@@ -1,0 +1,10 @@
+/home/juveme88/Documentos/Repositorios/crud-spring-boot-mysq/src/main/java/com/learn/crudspring/CrudSpringApplication.java
+/home/juveme88/Documentos/Repositorios/crud-spring-boot-mysq/src/main/java/com/learn/crudspring/service/UserService.java
+/home/juveme88/Documentos/Repositorios/crud-spring-boot-mysq/src/main/java/com/learn/crudspring/controller/constants/ControllerConstants.java
+/home/juveme88/Documentos/Repositorios/crud-spring-boot-mysq/src/main/java/com/learn/crudspring/dto/Request.java
+/home/juveme88/Documentos/Repositorios/crud-spring-boot-mysq/src/main/java/com/learn/crudspring/persistence/model/UserEntity.java
+/home/juveme88/Documentos/Repositorios/crud-spring-boot-mysq/src/main/java/com/learn/crudspring/controller/UserController.java
+/home/juveme88/Documentos/Repositorios/crud-spring-boot-mysq/src/main/java/com/learn/crudspring/controller/UserConverter.java
+/home/juveme88/Documentos/Repositorios/crud-spring-boot-mysq/src/main/java/com/learn/crudspring/persistence/repository/UserRepository.java
+/home/juveme88/Documentos/Repositorios/crud-spring-boot-mysq/src/main/java/com/learn/crudspring/dto/QueryResponse.java
+/home/juveme88/Documentos/Repositorios/crud-spring-boot-mysq/src/main/java/com/learn/crudspring/service/impl/UserServiceImpl.java

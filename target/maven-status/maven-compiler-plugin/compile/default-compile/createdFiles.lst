@@ -1,0 +1,10 @@
+com/learn/crudspring/dto/Request.class
+com/learn/crudspring/controller/constants/ControllerConstants.class
+com/learn/crudspring/CrudSpringApplication.class
+com/learn/crudspring/service/UserService.class
+com/learn/crudspring/controller/UserConverter.class
+com/learn/crudspring/persistence/repository/UserRepository.class
+com/learn/crudspring/service/impl/UserServiceImpl.class
+com/learn/crudspring/controller/UserController.class
+com/learn/crudspring/dto/QueryResponse.class
+com/learn/crudspring/persistence/model/UserEntity.class
