@@ -1,7 +1,6 @@
 package com.learn.crudspring.service;
 
 import java.util.List;
-
 import com.learn.crudspring.persistence.model.UserEntity;
 
 /**
@@ -11,9 +10,9 @@ import com.learn.crudspring.persistence.model.UserEntity;
  */
 public interface UserService {
 
-	List<UserEntity> findAll();
+  List<UserEntity> findAll();
 
-	UserEntity findById(Long id);
+  UserEntity findById(Long id);
 
-	UserEntity save(UserEntity user);
+  UserEntity save(UserEntity user);
 }

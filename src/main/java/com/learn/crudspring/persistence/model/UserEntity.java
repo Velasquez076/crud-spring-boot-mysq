@@ -6,36 +6,33 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 /**
  * 
- * @author juveme88
+ * @author Julian Velasquez
  *
  */
-@Setter
-@Getter
+@Data
 @Entity
 @Table(name = "tbl_users")
 public class UserEntity {
 
-	@Id
-	@Column(name = "user_id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+  @Id
+  @Column(name = "user_id")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-	@Column(name = "name")
-	private String nombre;
+  @Column(name = "name")
+  private String nombre;
 
-	@Column(name = "lastname")
-	private String apellido;
+  @Column(name = "lastname")
+  private String apellido;
 
-	@Column(name = "email")
-	private String email;
+  @Column(name = "email")
+  private String email;
 
-	@Column(name = "phone")
-	private String telefono;
+  @Column(name = "phone")
+  private String telefono;
 
 }

@@ -1,14 +1,7 @@
 package com.learn.crudspring.dto;
 
-import java.util.List;
-
 import org.springframework.http.HttpStatus;
-
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.learn.crudspring.persistence.model.UserEntity;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -19,21 +12,15 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
-public class QueryResponse {
+public class QueryResponse<T> {
 
-	private String uuid;
+  private String uuid;
 
-	private HttpStatus status;
+  private HttpStatus status;
 
-	@JsonProperty(value = "status_code")
-	private int statusCode;
+  @JsonProperty(value = "status_code")
+  private int statusCode;
 
-	@JsonInclude(value = Include.NON_EMPTY)
-	@JsonProperty(value = "Users")
-	private List<UserEntity> lstUsers;
-
-	@JsonInclude(value = Include.NON_NULL)
-	@JsonProperty(value = "User")
-	private UserEntity user;
-
+  @JsonProperty(value = "Response")
+  private T response;
 }
